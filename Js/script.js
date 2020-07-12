@@ -19,10 +19,10 @@ $(function () {
 
 })
 
-    $('#backTop').on('click',function () {
+    $('#backToTop').on('click',function () {
         $('html,body').animate({
             scrollTop:0
-        },1000)
+        },2000)
    
     })
 
