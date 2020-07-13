@@ -99,15 +99,14 @@ a{
 }
 /*Header Css End*/
 /*Bennar Css Start*/
-#bennar{
-    background-image: url(../images/bennar.jpg);
-    background-size: cover;
-    background-position: center;
+#banner .banner_item{
+    background-size: cover !important;
+    background-position: center !important;
 	padding: 195px 0;
 	position: relative;
 	z-index: 1;	
 }
-#bennar::before{
+#banner .banner_item::before{
 	position: absolute;
 	content: '';
 	width: 100%;
@@ -117,29 +116,29 @@ a{
 	background-color: rgba(0,0,0,.6);
 	z-index: -1;	
 }
-.bennar_content{
+.banner_content{
     text-align: center;
      color: #fff;
 }
-.bennar_content h4{
+.banner_content h4{
     font-size: 30px;
    font-weight: 400;
 }
 
-.bennar_content h1{
+.banner_content h1{
 	font-size: 68px;
 	font-weight: 800;
 	text-transform: uppercase;
 	letter-spacing: 30px;
 }
 
-.bennar_content p{
+.banner_content p{
 	font-size: 18px;
 }
-.bennar_content img{
+.banner_content img{
 	margin: 50px 0;
 }
-.bennar_btn a{
+.banner_btn a{
 	display: inline-block;
     font-size: 14px;
 	text-transform: uppercase;
