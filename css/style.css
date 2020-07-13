@@ -179,12 +179,13 @@ a{
 	-moz-transform:translateY (-50%);
 	-ms-transform:translateY (-50%);
 	-o-transform:translateY (-50%);
+	z-index: 99999;
 }
 .about_slider_left{
-	left:-5px;
+	left:-0px;
  }
  .about_slider_right{
-	right: -5px;
+	right: -0px;
  }
 #about .section_title img{
 	padding: 20px 0;
