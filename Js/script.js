@@ -33,6 +33,8 @@ $(function () {
         autoplay:true,
         autoplaySpeed: 1000,
         speed:500,
+       dots:true,
+       dotsClass:"banner_slick_dots",
        
     });
 
@@ -44,4 +46,8 @@ $(function () {
         prevArrow:'<i class="fas fa-arrow-left about_slider_left"></i>',
         nextArrow:'<i class="fas fa-arrow-right about_slider_right"></i>',
     })
+
+    //Work For Venubox
+
+    $('.venobox').venobox(); 
 })
