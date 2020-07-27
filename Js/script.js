@@ -49,5 +49,34 @@ $(function () {
 
     //Work For Venubox
 
-    $('.venobox').venobox(); 
+    $('.venobox').venobox ({
+        spinner:'three-bounce',
+        spinColor:'#05928d',
+        titleattr: 'data-title',
+        titleBackground: 	'#161617',
+    }); 
+
+    //Counter Up
+    $('.counter').counterUp ({
+        delay: 100,
+        time: 1000
+    });
+
+    //Smooth Scroll
+    $("a").on('click', function(event) {
+
+        if (this.hash !== "") {
+          
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        } 
+      });
+
+      //Animation
+      new WOW().init();
 })

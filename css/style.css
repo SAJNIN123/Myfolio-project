@@ -24,6 +24,10 @@
 	cursor: pointer;
 }
 /*Common Css Start*/
+
+html{
+	scroll-behavior: smooth;
+}
 body{
     font-family: 'Open Sans', sans-serif;
 }
@@ -85,17 +89,20 @@ a{
    
 }
 .menu ul li a{
-    color: white;
-   padding: 22px 25px; 
     font-size: 12px;
-    font-weight: 800;
-     display: inline-block;
-    transition: .5s;
-    -webkit-transition: .5s;
-   text-transform: uppercase;
+   font-weight: 800;
+   color: #fff;
+   display: block;
+   padding: 12px 25px;
+   margin: 10px 0;
+   -webkit-transition: all linear .5s;
+   -o-transition: all linear .5s;
+   transition: all linear .5s;
 }
 .menu ul li:hover a{
-    color: #cfc91d;
+	background-color: #cfc91d;
+	color: #02918c;
+	border-radius: 50px;
 }
 /*Header Css End*/
 /*Bennar Css Start*/
@@ -263,6 +270,22 @@ ul.banner_slick_dots li button{
 		color: #b8babd;
 }
 /*About Css End*/
+
+/*Counter Css Start*/
+#counter{
+	margin-bottom: 15px;
+}
+.counter_item{
+	width: 25%;
+	text-align: center;
+	color: #05928d;
+}
+
+.counter_item h2{
+	font-size: 50px;
+}
+/*Counter Css End*/
+
 /*Service Css Start*/
 #service{
 	background-image: url(../images/service_bg.jpg);
