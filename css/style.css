@@ -60,7 +60,84 @@ a{
 	line-height: 41px;
 }
 /*Common Css End*/
-/*Header Css Start*/
+/*Preloder Css Start*/
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #ddd;
+	z-index: 9999999999;
+}
+#loader {
+	display: block;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	width: 150px;
+	height: 150px;
+	margin: -75px 0 0 -75px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-top-color: #000;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+#loader:before {
+	content: "";
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-top-color: #02918c;
+	-webkit-animation: spin 3s linear infinite;
+	animation: spin 3s linear infinite;
+}
+#loader:after {
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	right: 15px;
+	bottom: 15px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-top-color: #cfc91d;
+	-webkit-animation: spin 1.5s linear infinite;
+	animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+	0%   {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+	0%   {
+		-webkit-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+  /*Preloder Css End*/
+
+  /*Header Css Start*/
+
 #header{
     background-color: #02918c;
 }
@@ -106,6 +183,17 @@ a{
 }
 /*Header Css End*/
 /*Bennar Css Start*/
+#banner{
+	position: relative;
+	
+}
+#particles-js{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
 ul.banner_slick_dots{
 	position: absolute;
 	left: 50%;
@@ -145,7 +233,7 @@ ul.banner_slick_dots li button{
     background-position: center !important;
 	padding: 195px 0;
 	position: relative;
-	z-index: 1;	
+	z-index: 999999;	
 }
 #banner .banner_item::before{
 	position: absolute;
@@ -159,7 +247,8 @@ ul.banner_slick_dots li button{
 }
 .banner_content{
     text-align: center;
-     color: #fff;
+	 color: #fff;
+	 z-index: 99999999999;
 }
 .banner_content h4{
     font-size: 30px;
@@ -195,6 +284,7 @@ ul.banner_slick_dots li button{
 }
 /*Bennar Css End*/
 /*About Css Start*/
+
 #about{
 	padding:80px 0 97px;
 }
@@ -328,6 +418,45 @@ ul.banner_slick_dots li button{
 #my_work{
 	padding: 85px 0 75px;
 }
+ .work_menu{
+	text-align: center;
+	margin: 20px 0;
+ }
+ .work_menu ul{
+	display: inline-block;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-o-border-radius: 50px;
+	box-shadow: inset 0 0 20px -10px #02918c;
+ }
+
+ .work_menu ul li{
+	display: inline-block;
+	font-size: 20px;
+	padding: 10px 15px;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	-ms-border-radius: 50px;
+	-o-border-radius: 50px;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all .6s;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	-ms-transition: all .6s;
+	-o-transition: all .6s;
+ }
+
+ .work_menu ul li.active{
+	background-color: #02918c;
+	color: #fff;
+ }
+
+
+
 #my_work .section_title img{
 	padding: 20px 0;
 }
@@ -344,7 +473,7 @@ ul.banner_slick_dots li button{
 }
 .my_work_item img{
 	width: 100%;
-	height: 100%;
+	height: 250px;
 	display: block;
 }
 .my_work_item .overly{
@@ -358,7 +487,7 @@ ul.banner_slick_dots li button{
 	color: #fff;
 	padding: 50px 40px;
 	transform-origin: top;
-	transform: scale(0);
+	transform: scale(1.2);
 	-webkit-transform: scale(0);
 	-moz-transform: scale(0);
 	-ms-transform: scale(0);
@@ -390,6 +519,7 @@ ul.banner_slick_dots li button{
 #contact .section_title p{
 	width: 684px;
 	margin: auto;
+	padding-bottom: 40px;
 }
 #contact .section_title img{
 	padding: 20px 0;
